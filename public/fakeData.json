@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "author": "Jane Doe",
+        "title": "10 Tips for Better Sleep",
+        "images": {
+            "cover": "../src/images/blog-covers/blog-c1.png",
+            "author": "../src/images/authors/author-1.png"
+        },
+        "read_time": "5 minutes",
+        "publish_date": "2022-02-01"
+    },
+    {
+        "id": 2,
+        "author": "John Smith",
+        "title": "The Benefits of Yoga",
+        "images": {
+            "cover": "../src/images/blog-covers/blog-c2.jpg",
+            "author": "../src/images/authors/author-2.webp"
+        },
+        "read_time": "7 minutes",
+        "publish_date": "2022-03-15"
+    },
+    {
+        "id": 3,
+        "author": "Alice Johnson",
+        "title": "Why Meditation is Good for Your Mental Health",
+        "images": {
+            "cover": "../src/images/blog-covers/blog-c3.png",
+            "author": "../src/images/authors/author-3.png"
+        },
+        "read_time": "6 minutes",
+        "publish_date": "2022-04-02"
+    },
+    {
+        "id": 4,
+        "author": "Bob Williams",
+        "title": "How to Build Your Own Website",
+        "images": {
+            "cover": "../src/images/blog-covers/blog-c4.png",
+            "author": "../src/images/authors/author-4.png"
+        },
+        "read_time": "10 minutes",
+        "publish_date": "2022-05-20"
+    }
+]
