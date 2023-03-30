@@ -7,7 +7,7 @@ const Header = () => {
         <header>
             <nav>
                 <div>
-                    <h2>Developer Cafe.</h2>
+                    <h2>Developer Cafe</h2>
                 </div>
                 <div>
                     <img src={user} alt="" />
