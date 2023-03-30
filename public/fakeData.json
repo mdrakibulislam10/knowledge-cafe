@@ -7,8 +7,12 @@
             "cover": "../src/images/blog-covers/blog-c1.png",
             "author": "../src/images/authors/author-1.png"
         },
-        "read_time": "5 minutes",
-        "publish_date": "2022-02-01"
+        "read_time": "05",
+        "publish_date": "Mar 30 (1 Day ago)",
+        "hash": [
+            "#beginners",
+            "#programming"
+        ]
     },
     {
         "id": 2,
@@ -18,8 +22,12 @@
             "cover": "../src/images/blog-covers/blog-c2.jpg",
             "author": "../src/images/authors/author-2.webp"
         },
-        "read_time": "7 minutes",
-        "publish_date": "2022-03-15"
+        "read_time": "07",
+        "publish_date": "Mar 28 (3 Day ago)",
+        "hash": [
+            "#beginners",
+            "#programming"
+        ]
     },
     {
         "id": 3,
@@ -29,8 +37,12 @@
             "cover": "../src/images/blog-covers/blog-c3.png",
             "author": "../src/images/authors/author-3.png"
         },
-        "read_time": "6 minutes",
-        "publish_date": "2022-04-02"
+        "read_time": "06",
+        "publish_date": "Mar 27 (4 Day ago)",
+        "hash": [
+            "#beginners",
+            "#programming"
+        ]
     },
     {
         "id": 4,
@@ -40,7 +52,11 @@
             "cover": "../src/images/blog-covers/blog-c4.png",
             "author": "../src/images/authors/author-4.png"
         },
-        "read_time": "10 minutes",
-        "publish_date": "2022-05-20"
+        "read_time": "10",
+        "publish_date": "Mar 25 (6 Day ago)",
+        "hash": [
+            "#beginners",
+            "#programming"
+        ]
     }
 ]

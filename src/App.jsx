@@ -1,10 +1,13 @@
 import './App.css'
+import BlogPage from './components/BlogPage/BlogPage'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <div className="App">
-      hi
+      <Header></Header>
+      <BlogPage></BlogPage>
     </div>
   )
 }
