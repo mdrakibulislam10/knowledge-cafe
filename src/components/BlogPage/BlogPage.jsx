@@ -12,6 +12,9 @@ const BlogPage = () => {
     // count bookmark num
     const [countBM, setCountBM] = useState(0);
 
+    // count read time
+    const [readTime, setReadTime] = useState(0);
+
     // load blogs
     useEffect(() => {
         fetch("fakeData.json")
@@ -23,7 +26,8 @@ const BlogPage = () => {
     const updateBookMarkHandler = (blog) => {
         setBlog(blog);
         setCountBM(countBM + 1);
-    }
+        setReadTime(readTime + parseInt(blog.read_time));
+    };
 
     return (
         <section className='blog-container'>
@@ -43,6 +47,7 @@ const BlogPage = () => {
                         <Bookmarks
                             blog={blog}
                             countBM={countBM}
+                            readTime={readTime}
                         ></Bookmarks>
                     }
                 </dir>
