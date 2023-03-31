@@ -13,7 +13,7 @@ const Bookmarks = (props) => {
 
             <div className='added-bookmark'>
                 <h2>Bookmarked Blogs : {countBM}</h2>
-                <div>
+                <div style={{ textAlign: "start" }}>
                     {
                         selectedBlogs.map(blog => <MarkTitle
                             title={blog.title}

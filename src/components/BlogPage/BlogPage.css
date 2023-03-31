@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     .blog-container {
         display: grid;
         grid-template-columns: 2fr 1fr;

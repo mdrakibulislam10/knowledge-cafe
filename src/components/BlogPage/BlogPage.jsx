@@ -6,7 +6,6 @@ import Bookmarks from '../Bookmarks/Bookmarks';
 // toast
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { setDataToLocalStorage } from '../../utilities/LocalStorage';
 
 const BlogPage = () => {
     // load blogs
@@ -39,7 +38,7 @@ const BlogPage = () => {
     // bookmark handler
     const bookmarkHandler = (blog) => {
         if (selectedBlogs.find(b => b.id === blog.id)) {
-            toast("You Have Already Bookmarked This Blog!");
+            toast("You Have Already Bookmarked This Blog! Please try to add another blog!");
         }
         else {
             const currentSelectedBlogs = [...selectedBlogs, blog];
@@ -63,7 +62,7 @@ const BlogPage = () => {
 
         const storedCount = localStorage.getItem("count");
         if (storedCount) {
-            setCountBM(storedCount);
+            setCountBM(parseInt(storedCount));
         }
 
         const storedTime = localStorage.getItem("time");
