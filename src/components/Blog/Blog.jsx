@@ -11,13 +11,15 @@ const Blog = () => {
                         <b>#props:</b> Props is short form of properties. Props is used for sending data parent component to child component. When we passed data parent to child component then, the props parameter receive an object. Props is immutable. We can't change or update props value. But, we can used props's value.
                         <br />
                         <br />
-                        <b>#state:</b> if something change on the website then, State is used. Use useState() method to use or modify the state. useState() method give us two value. First value is an initial(default) value and second value is a function. useState() is on kind of array. So, we can get two value with array destructuring. We can set, change or update value of state with setState() function. Props is mutable. We change or update state value and we can used state's value. We can passed state value parent to child component with props.
+                        <b>#state:</b> if something change on the website then, State is used. Use useState() method(hook) to use or modify the state. State is mutable. We can set, change or update value of state with setState() function. We can passed state value parent to child component with props.
                     </p>
                 </article>
 
                 <article>
                     <h2>2. How does useState work?</h2>
-                    <p></p>
+                    <p>
+                        <b>#useState():</b> useState() is react hook. useState() use for set / update state value. useState() returns an array with two values. First value is an initial(default) value and second value is a function. We can get two value with array destructuring. set, change or update state value by setState() method.
+                    </p>
                 </article>
 
                 <article>
