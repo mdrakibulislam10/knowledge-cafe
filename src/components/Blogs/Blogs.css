@@ -3,3 +3,54 @@
     height: 450px;
     border-radius: 8px;
 }
+
+.blog .author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.author-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    text-align: start;
+}
+
+.author-name {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: -10px;
+}
+
+.publish-date {
+    color: rgba(17, 17, 17, 0.6);
+    font-weight: 600;
+    /* margin-top: -6px; */
+}
+
+.read-time,
+.hash {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.mark-as-read-btn {
+    text-decoration-line: underline;
+    color: #6047EC;
+    font-weight: 600;
+    font-size: 20px;
+}
