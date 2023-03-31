@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import "./BlogPage.css";
 import Blogs from '../Blogs/Blogs';
+import Bookmarks from '../Bookmarks/Bookmarks';
 
 const BlogPage = () => {
     const [blogs, setBlogs] = useState([]);
+
+    const [blog, setBlog] = useState({});
+
+    // count bookmark num
+    const [countBM, setCountBM] = useState(0);
 
     // load blogs
     useEffect(() => {
@@ -13,17 +19,33 @@ const BlogPage = () => {
             .then(data => setBlogs(data))
     }, []);
 
+    // mark as read handler
+    const updateBookMarkHandler = (blog) => {
+        setBlog(blog);
+        setCountBM(countBM + 1);
+    }
 
     return (
         <section className='blog-container'>
             <div className='blogs'>
                 {
-                    blogs.map(blog => <Blogs blog={blog}></Blogs>)
+                    blogs.map(blog => <Blogs
+                        blog={blog}
+                        updateBookMarkHandler={updateBookMarkHandler}
+                        key={blog.id}
+                    ></Blogs>)
                 }
             </div>
 
             <div className='bookmarks'>
-                jjjj
+                <dir>
+                    {
+                        <Bookmarks
+                            blog={blog}
+                            countBM={countBM}
+                        ></Bookmarks>
+                    }
+                </dir>
             </div>
         </section>
     );
