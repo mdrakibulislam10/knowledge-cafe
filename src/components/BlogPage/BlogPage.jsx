@@ -40,17 +40,17 @@ const BlogPage = () => {
         if (selectedBlogs.find(b => b.id === blog.id)) {
             toast("You Have Already Bookmarked This Blog! Please try to add another blog!");
         }
-        // else {
-        const currentSelectedBlogs = [...selectedBlogs, blog];
-        setSelectedBlogs(currentSelectedBlogs);
+        else {
+            const currentSelectedBlogs = [...selectedBlogs, blog];
+            setSelectedBlogs(currentSelectedBlogs);
 
-        const currentCount = countBM + 1;
-        setCountBM(currentCount);
+            const currentCount = countBM + 1;
+            setCountBM(currentCount);
 
-        // set data to local storage
-        localStorage.setItem("blog", JSON.stringify(currentSelectedBlogs));
-        localStorage.setItem("count", currentCount);
-        // }
+            // set data to local storage
+            localStorage.setItem("blog", JSON.stringify(currentSelectedBlogs));
+            localStorage.setItem("count", currentCount);
+        }
     };
 
     // get data from local storage
