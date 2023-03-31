@@ -8,10 +8,10 @@ const Blog = () => {
                 <article>
                     <h2>1. Props vs state.</h2>
                     <p>
-                        <b>#props:</b> Props is short form of properties. Props is used for sending data parent component to child component. When we passed data parent to child component then, the props parameter receive an object. Props is immutable. We can't change or update props value. But, we can used props's value.
+                        <b>#Props:</b> Props is short form of properties. Props is used for sending data parent component to child component. When we passed data parent to child component then, the props parameter receive an object. Props is immutable. We can't change or update props value. But, we can used props's value.
                         <br />
                         <br />
-                        <b>#state:</b> if something change on the website then, State is used. Use useState() method(hook) to use or modify the state. State is mutable. We can set, change or update value of state with setState() function. We can passed state value parent to child component with props.
+                        <b>#State:</b> if something change on the website then, State is used. Use useState() method(hook) to use or modify the state. State is mutable. We can set, change or update value of state with setState() function. We can passed state value parent to child component with props.
                     </p>
                 </article>
 
@@ -24,12 +24,16 @@ const Blog = () => {
 
                 <article>
                     <h2>3. Purpose of useEffect other than fetching data.</h2>
-                    <p></p>
+                    <p>
+                        <b>#useEffect():</b> useEffect() is react hook. useEffect() use for side effect such as: fetching API data, local storage data, etc. Also we can use useEffect() for updating DOM. We can load data and set to state and passed data in JSX element and displayed on UI. We can use useEffect() for- event handlers, dynamic data load(get), update state value, make animation and more. How many times the arrow function of useEffect will be executed can be control by  dependency.
+                    </p>
                 </article>
 
                 <article>
                     <h2>4. How Does React work?</h2>
-                    <p></p>
+                    <p>
+                        <b>#React:</b>
+                    </p>
                 </article>
             </div>
         </section>
