@@ -3,7 +3,7 @@ import "./MarkTitle.css";
 
 const MarkTitle = ({ title }) => {
     return (
-        <div className='title'>
+        <div className='added-title'>
             <p>{title}</p>
         </div>
     );

@@ -6,8 +6,10 @@ import Bookmarks from '../Bookmarks/Bookmarks';
 // toast
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import { setDataToLocalStorage } from '../../utilities/LocalStorage';
 
 const BlogPage = () => {
+    // load blogs
     const [blogs, setBlogs] = useState([]);
 
     // count bookmark num
@@ -16,7 +18,7 @@ const BlogPage = () => {
     // count read time
     const [readTime, setReadTime] = useState(0);
 
-    // selected blog for title
+    // selected blog for bookmark
     const [selectedBlogs, setSelectedBlogs] = useState([]);
 
     // load blogs
@@ -27,20 +29,48 @@ const BlogPage = () => {
     }, []);
 
     // mark as read handler
-    const updateBookMarkHandler = (blog) => {
-        setReadTime(readTime + parseInt(blog.read_time));
+    const markAsReadHandler = (blog) => {
+        const currentTime = readTime + parseInt(blog.read_time);
+        setReadTime(currentTime);
+
+        localStorage.setItem("time", currentTime);
     };
 
+    // bookmark handler
     const bookmarkHandler = (blog) => {
-
         if (selectedBlogs.find(b => b.id === blog.id)) {
             toast("You Have Already Bookmarked This Blog!");
         }
         else {
-            setSelectedBlogs([...selectedBlogs, blog])
-            setCountBM(countBM + 1);
+            const currentSelectedBlogs = [...selectedBlogs, blog];
+            setSelectedBlogs(currentSelectedBlogs);
+
+            const currentCount = countBM + 1;
+            setCountBM(currentCount);
+
+            // set data to local storage
+            localStorage.setItem("blog", JSON.stringify(currentSelectedBlogs));
+            localStorage.setItem("count", currentCount);
         }
-    }
+    };
+
+    // get data from local storage
+    useEffect(() => {
+        const storedBlog = JSON.parse(localStorage.getItem("blog"));
+        if (storedBlog) {
+            setSelectedBlogs(storedBlog);
+        }
+
+        const storedCount = localStorage.getItem("count");
+        if (storedCount) {
+            setCountBM(storedCount);
+        }
+
+        const storedTime = localStorage.getItem("time");
+        if (storedTime) {
+            setReadTime(parseInt(storedTime));
+        }
+    }, []);
 
     return (
         <section className='blog-container'>
@@ -48,7 +78,7 @@ const BlogPage = () => {
                 {
                     blogs.map(blog => <Blogs
                         blog={blog}
-                        updateBookMarkHandler={updateBookMarkHandler}
+                        markAsReadHandler={markAsReadHandler}
                         bookmarkHandler={bookmarkHandler}
                         ToastContainer={ToastContainer}
                         key={blog.id}
