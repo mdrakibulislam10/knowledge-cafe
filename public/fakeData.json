@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "author": "Jane Doe",
+        "author": "Elon musk",
         "title": "10 Essential Web Development Tools Every Developer Should Know About.",
         "images": {
             "cover": "https://media.istockphoto.com/id/1356364287/photo/close-up-focus-on-persons-hands-typing-on-the-desktop-computer-backlit-keyboard-screens-show.jpg?b=1&s=170667a&w=0&k=20&c=yCgo02F66I8b1rgmnSXTyeN42k16-rti3iWszjZijWM=",
@@ -16,7 +16,7 @@
     },
     {
         "id": 2,
-        "author": "John Smith",
+        "author": "Lary page",
         "title": "Building Accessible and User-Friendly Websites: Best Practices for Web Development.",
         "images": {
             "cover": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -31,7 +31,7 @@
     },
     {
         "id": 3,
-        "author": "Alice Johnson",
+        "author": "Jack ma",
         "title": "From Zero to Hero: Tips and Strategies for Learning Web Development as a Beginner.",
         "images": {
             "cover": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=996&t=st=1680212834~exp=1680213434~hmac=533c8096f4c3c72e19330cbdf081e8d15556ce80dad70e90f791464bf8124f33",
@@ -46,7 +46,7 @@
     },
     {
         "id": 4,
-        "author": "Bob Williams",
+        "author": "Levi ackerman",
         "title": "What are some common web development frameworks and libraries, and how can I use them to build web applications?",
         "images": {
             "cover": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80",

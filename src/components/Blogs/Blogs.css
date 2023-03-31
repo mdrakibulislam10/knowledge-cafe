@@ -59,3 +59,8 @@
 .mark-as-read-btn:hover {
     color: orange;
 }
+
+.bookmark-btn:hover {
+    cursor: pointer;
+    color: orangered;
+}

@@ -3,11 +3,12 @@ import { useEffect } from 'react';
 import "./BlogPage.css";
 import Blogs from '../Blogs/Blogs';
 import Bookmarks from '../Bookmarks/Bookmarks';
+// toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BlogPage = () => {
     const [blogs, setBlogs] = useState([]);
-
-    // const [blog, setBlog] = useState([]);
 
     // count bookmark num
     const [countBM, setCountBM] = useState(0);
@@ -15,7 +16,7 @@ const BlogPage = () => {
     // count read time
     const [readTime, setReadTime] = useState(0);
 
-    // one by one title
+    // selected blog for title
     const [selectedBlogs, setSelectedBlogs] = useState([]);
 
     // load blogs
@@ -27,17 +28,19 @@ const BlogPage = () => {
 
     // mark as read handler
     const updateBookMarkHandler = (blog) => {
-        // setBlog(blog);
-        setCountBM(countBM + 1);
         setReadTime(readTime + parseInt(blog.read_time));
-
     };
 
     const bookmarkHandler = (blog) => {
-        setSelectedBlogs([...selectedBlogs, blog])
 
+        if (selectedBlogs.find(b => b.id === blog.id)) {
+            toast("You Have Already Bookmarked This Blog!");
+        }
+        else {
+            setSelectedBlogs([...selectedBlogs, blog])
+            setCountBM(countBM + 1);
+        }
     }
-    // console.log(selectedBlogs);
 
     return (
         <section className='blog-container'>
@@ -47,6 +50,7 @@ const BlogPage = () => {
                         blog={blog}
                         updateBookMarkHandler={updateBookMarkHandler}
                         bookmarkHandler={bookmarkHandler}
+                        ToastContainer={ToastContainer}
                         key={blog.id}
                     ></Blogs>)
                 }
@@ -61,9 +65,6 @@ const BlogPage = () => {
                             readTime={readTime}
                         ></Bookmarks>
                     }
-                    {/* {
-                        selectedBlogs.map(blog => <Bookmarks blog={blog} key={blog.id}></Bookmarks>)
-                    } */}
                 </div>
             </div>
         </section>
