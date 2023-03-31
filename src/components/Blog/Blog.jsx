@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <section>
-            <h1 style={{ color: "orange" }}>Welcome to my own blog!</h1>
+            <h2 style={{ color: "orange", fontSize: "35px" }}>Welcome to my own blog!</h2>
             <div style={{ textAlign: "start" }}>
                 <article>
                     <h2>1. Props vs state.</h2>
@@ -32,7 +32,7 @@ const Blog = () => {
                 <article>
                     <h2>4. How Does React work?</h2>
                     <p>
-                        <b>#React:</b>
+                        <b>#React:</b> React is JavaScript library for building UI. React keep copy of original DOM as virtual DOM. When, we change any content of website then, virtual dom is compare with the original dom and find out where the changed content and update with babel compiler without full website re-rendering. React have some hook. We can use hook for easily maintain js code. We can write html in js file with JSX. It's not real html. Babel is used for convert JSX to js object.
                     </p>
                 </article>
             </div>
