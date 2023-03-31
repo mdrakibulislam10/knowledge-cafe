@@ -7,13 +7,16 @@ import Bookmarks from '../Bookmarks/Bookmarks';
 const BlogPage = () => {
     const [blogs, setBlogs] = useState([]);
 
-    const [blog, setBlog] = useState({});
+    // const [blog, setBlog] = useState([]);
 
     // count bookmark num
     const [countBM, setCountBM] = useState(0);
 
     // count read time
     const [readTime, setReadTime] = useState(0);
+
+    // one by one title
+    const [selectedBlogs, setSelectedBlogs] = useState([]);
 
     // load blogs
     useEffect(() => {
@@ -24,10 +27,17 @@ const BlogPage = () => {
 
     // mark as read handler
     const updateBookMarkHandler = (blog) => {
-        setBlog(blog);
+        // setBlog(blog);
         setCountBM(countBM + 1);
         setReadTime(readTime + parseInt(blog.read_time));
+
     };
+
+    const bookmarkHandler = (blog) => {
+        setSelectedBlogs([...selectedBlogs, blog])
+
+    }
+    // console.log(selectedBlogs);
 
     return (
         <section className='blog-container'>
@@ -36,21 +46,25 @@ const BlogPage = () => {
                     blogs.map(blog => <Blogs
                         blog={blog}
                         updateBookMarkHandler={updateBookMarkHandler}
+                        bookmarkHandler={bookmarkHandler}
                         key={blog.id}
                     ></Blogs>)
                 }
             </div>
 
             <div className='bookmarks'>
-                <dir>
+                <div>
                     {
                         <Bookmarks
-                            blog={blog}
+                            selectedBlogs={selectedBlogs}
                             countBM={countBM}
                             readTime={readTime}
                         ></Bookmarks>
                     }
-                </dir>
+                    {/* {
+                        selectedBlogs.map(blog => <Bookmarks blog={blog} key={blog.id}></Bookmarks>)
+                    } */}
+                </div>
             </div>
         </section>
     );
